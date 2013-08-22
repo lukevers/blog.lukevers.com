@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NodeAtlas v0.5.9</title>
+    <link rel="alternate" href="/rss" type="application/rss+xml" title="RSS"/>
+    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png"/>
+    <meta charset="utf-8">
+    
+<link rel="stylesheet" href="/assets/css/rainbow.css">
+<link rel="stylesheet" href="/assets/css/nprogress.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+    
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/nprogress.js"></script>
+<script type="text/javascript" src="/assets/js/rainbow.js"></script>
+<script type="text/javascript" src="/assets/js/color.js"></script>
+<script type="text/javascript" src="/assets/js/language/css.js"></script>
+<script type="text/javascript" src="/assets/js/language/generic.js"></script>
+<script type="text/javascript" src="/assets/js/language/go.js"></script>
+<script type="text/javascript" src="/assets/js/language/html.js"></script>
+<script type="text/javascript" src="/assets/js/language/javascript.js"></script>
+<script type="text/javascript" src="/assets/js/language/shell.js"></script>
+
+    
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://analytics.lukevers.com/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "6"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="head">
+	<a href="/">home</a> / 
+	<a href="https://lukevers.com">website</a> /
+	<a href="/rss">rss</a> /
+	
+	<a href="Double-Bitwise-Not">&#8592; Double Bitwise Not</a> /
+	
+	NodeAtlas v0.5.9
+	
+	/ <a href="Switching-to-Nginx">Switching to Nginx &#8594;</a>
+	
+      </div>
+      
+<article>
+  <h1>NodeAtlas v0.5.9</h1>
+  <div class="content"><h3>What&rsquo;s new?</h3>
+
+<ul>
+<li>The navbar is now translucent and matches everything else.</li>
+<li>The navbar has been split up into sections on the side, with drop down menus for map, filter, and tools.</li>
+<li>There&rsquo;s a new <code>filter</code> category! You can filter nodes based on the corresponding filters that you choose. To active it, just click &ldquo;Off&rdquo; on the filter drop down menu and it&rsquo;ll give you a list of options.</li>
+<li>The +/- buttons to zoom in/zoom out are now under the <code>map</code> category.</li>
+<li>The color of VPS nodes have been changed from gray to an orange-like color.</li>
+</ul>
+
+<p>You can view the entire pull request on GitHub <a href="https://github.com/ProjectMeshnet/nodeatlas/pull/153">here</a>. For a live version of NodeAtlas, you can checkout the main map that <a href="https://projectmeshnet.org/">Project Meshnet</a> uses at <a href="http://map.projectmeshnet.org/">map.projectmeshnet.org</a>. Please take note that if you&rsquo;re reading this after another update, the map will likely be updated to the most recent version. If you&rsquo;d like to checkout this particular version, feel free to clone from our <a href="https://github.com/ProjectMeshnet/nodeatlas">GitHub repo</a> or download the tag <a href="https://github.com/ProjectMeshnet/nodeatlas/releases/tag/v0.5.9">v0.5.9</a>.</p>
+</div>
+  <time>This post was published by Luke Evers on 2013-08-08 at 11:49</time>
+</article>
+
+    </div>
+    <div class="foot">
+      <a href="mailto:luke@lukevers.com" class="icon-envelope"></a>
+      <a href="https://github.com/lukevers" class="icon-github"></a>
+      <a href="http://stackoverflow.com/users/2166043/luke-evers" class="icon-stackoverflow"></a>
+      <a href="https://twitter.com/lukevers_" class="icon-twitter"></a>
+      <a href="http://lukeevers.tumblr.com/" class="icon-tumblr"></a>
+      <a href="https://www.facebook.com/lukeevers" class="icon-facebook"></a>
+      <a href="http://www.reddit.com/user/lukevers/" class="icon-reddit"></a>
+    </div>
+  </body>
+</html>

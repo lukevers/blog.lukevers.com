@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Initial Commit</title>
+    <link rel="alternate" href="/rss" type="application/rss+xml" title="RSS"/>
+    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png"/>
+    <meta charset="utf-8">
+    
+<link rel="stylesheet" href="/assets/css/rainbow.css">
+<link rel="stylesheet" href="/assets/css/nprogress.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+    
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/nprogress.js"></script>
+<script type="text/javascript" src="/assets/js/rainbow.js"></script>
+<script type="text/javascript" src="/assets/js/color.js"></script>
+<script type="text/javascript" src="/assets/js/language/css.js"></script>
+<script type="text/javascript" src="/assets/js/language/generic.js"></script>
+<script type="text/javascript" src="/assets/js/language/go.js"></script>
+<script type="text/javascript" src="/assets/js/language/html.js"></script>
+<script type="text/javascript" src="/assets/js/language/javascript.js"></script>
+<script type="text/javascript" src="/assets/js/language/shell.js"></script>
+
+    
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://analytics.lukevers.com/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "6"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="head">
+	<a href="/">home</a> / 
+	<a href="https://lukevers.com">website</a> /
+	<a href="/rss">rss</a> /
+	
+	Initial Commit
+	
+	/ <a href="Mimetypes-in-Lighttpd">Mimetypes in Lighttpd &#8594;</a>
+	
+      </div>
+      
+<article>
+  <h1>Initial Commit</h1>
+  <div class="content"><p>Hello! Since <a href="http://speedfulpanic.net">Sasha</a> and <a href="http://dylwhich.com/">Dylan</a> have both set up instances of the blogging engine <a href="https://github.com/PuerkitoBio/trofaf">Trofaf</a>, written in <a href="http://golang.org">Go</a>, I decided to also give it a <em>go</em>. You can read all about Trofaf on GitHub if you&rsquo;re so inclined.</p>
+
+<h3>My Setup</h3>
+
+<p>I&rsquo;m using Trofaf to generate my static site, and I&rsquo;m using <a href="http://www.lighttpd.net/">Lighttpd</a> as my webserver. I&rsquo;ve been slowly considering using <a href="http://nginx.com/">Nginx</a> instead of Lighttpd, but I have yet to migrate all my sites over.</p>
+
+<p>I&rsquo;m also using <a href="http://craig.is/making/rainbows">Rainbow</a> for syntax highlighting! I&rsquo;ve used <a href="http://alexgorbatchev.com/SyntaxHighlighter/">SyntaxHighlighter</a> before, but I recently came across Rainbow and decided to give it a try! There are a ton of different styles to use, and you could even write your own style if you&rsquo;re so inclined to do so. I&rsquo;m using a theme called <a href="https://github.com/ccampbell/rainbow/blob/master/themes/github.css">Github.css</a>.</p>
+
+<p>Since Trofaf&rsquo;s markdown parser, <a href="https://github.com/russross/blackfriday">BlackFriday</a>, a great markdown parser for Go, adds the language from pre/code blocks to the class of the code block, I had to change some things around to get Rainbow to work. Why? Rainbow uses <code>data-language=&quot;go&quot;</code> in order to determine what syntax to use (replace <code>go</code> with any language you&rsquo;re writing in). So here was my solution:</p>
+
+<pre><code class="javascript">$(document).ready(function() {
+    var code = $('code');
+
+    for (var i = 0; i &lt; code.length; i++) {
+        var lang = code[i].className;
+        code[i].id = lang+i;
+        id = '#'+code[i].id;
+        $(id).attr('data-language', lang);
+    }
+
+    Rainbow.color();
+});
+</code></pre>
+
+<p>JQuery gets all <code>code</code> elements and then loops through them all. Each time we go through the loop we get the class name and create an id for the current element. We don&rsquo;t want to give the same id to multiple elements if there are more than one pre/code blocks with the same language, so we add the integer <code>i</code> to the id to make sure that it&rsquo;s unique.</p>
+
+<p>And that&rsquo;s it!</p>
+</div>
+  <time>This post was published by Luke Evers on 2013-08-05 at 15:30</time>
+</article>
+
+    </div>
+    <div class="foot">
+      <a href="mailto:luke@lukevers.com" class="icon-envelope"></a>
+      <a href="https://github.com/lukevers" class="icon-github"></a>
+      <a href="http://stackoverflow.com/users/2166043/luke-evers" class="icon-stackoverflow"></a>
+      <a href="https://twitter.com/lukevers_" class="icon-twitter"></a>
+      <a href="http://lukeevers.tumblr.com/" class="icon-tumblr"></a>
+      <a href="https://www.facebook.com/lukeevers" class="icon-facebook"></a>
+      <a href="http://www.reddit.com/user/lukevers/" class="icon-reddit"></a>
+    </div>
+  </body>
+</html>

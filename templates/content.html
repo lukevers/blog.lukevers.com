@@ -1,0 +1,7 @@
+{{ define "content" }}
+<article>
+  <h1>{{ .Post.ShortPost.Title }}</h1>
+  <div class="content">{{ .Post.Content }}</div>
+  <time>This post was published by {{.Post.Author}} on {{ fmttime .Post.ShortPost.PubTime "2006-01-02" }} at {{ fmttime .Post.ShortPost.PubTime "15:04"  }}</time>
+</article>
+{{ end }}

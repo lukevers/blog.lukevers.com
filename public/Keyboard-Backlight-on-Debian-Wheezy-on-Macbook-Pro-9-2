@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Keyboard Backlight on Debian Wheezy with Macbook Pro 9,2</title>
+    <link rel="alternate" href="/rss" type="application/rss+xml" title="RSS"/>
+    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png"/>
+    <meta charset="utf-8">
+    
+<link rel="stylesheet" href="/assets/css/rainbow.css">
+<link rel="stylesheet" href="/assets/css/nprogress.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+    
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/nprogress.js"></script>
+<script type="text/javascript" src="/assets/js/rainbow.js"></script>
+<script type="text/javascript" src="/assets/js/color.js"></script>
+<script type="text/javascript" src="/assets/js/language/css.js"></script>
+<script type="text/javascript" src="/assets/js/language/generic.js"></script>
+<script type="text/javascript" src="/assets/js/language/go.js"></script>
+<script type="text/javascript" src="/assets/js/language/html.js"></script>
+<script type="text/javascript" src="/assets/js/language/javascript.js"></script>
+<script type="text/javascript" src="/assets/js/language/shell.js"></script>
+
+    
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://analytics.lukevers.com/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "6"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="head">
+	<a href="/">home</a> / 
+	<a href="https://lukevers.com">website</a> /
+	<a href="/rss">rss</a> /
+	
+	<a href="Switching-to-Weechat">&#8592; Switching to Weechat</a> /
+	
+	Keyboard Backlight on Debian Wheezy with Macbook Pro 9,2
+	
+	/ <a href="Splash-Screen-on-Debian-Wheezy">Splash Screen on Debian Wheezy &#8594;</a>
+	
+      </div>
+      
+<article>
+  <h1>Keyboard Backlight on Debian Wheezy with Macbook Pro 9,2</h1>
+  <div class="content"><p>I&rsquo;m not sure how many MacbookPro Debian users out there, but if you haven&rsquo;t figured out how to get the keyboard backlight to work, this is for you! I won&rsquo;t bother you with every wrong choice that I made while trying to figure this out, but I will get straight to the point and tell you how to get this done! From what it seems like, most (or even I could go as far as to say all) Macbook Pro models seem to be supported! I haven&rsquo;t seen a list of what is supported, but this has been the best package to use as of right now.</p>
+
+<h4>Applesmc-dkms</h4>
+
+<p>That&rsquo;s what it&rsquo;s called! On <a href="http://bitmath.org/code/applesmc-dkms/">their website</a> it says:</p>
+
+<pre><code>As of 25OCT2008, the package applesmc-dkms is available in the mactel ppa. 
+It supports the new unibody Macbook 5 and Macbook Pro 5. 
+</code></pre>
+
+<p>You can either add the PPA, compile it from source, or download a deb file and install it with <code>dpkg</code>. The quickest way (unless you already have the PPA on your computer) would just be to download the deb file directly from <a href="https://launchpad.net/~mactel-support/+archive/ppa/+files/applesmc-dkms_0.18.2_all.deb">here</a>. You can also view all of the packages from that PPA <a href="https://launchpad.net/~mactel-support/+archive/ppa/+packages">here</a>.</p>
+
+<p>Once you install it, reboot your computer and it should work. :)</p>
+</div>
+  <time>This post was published by Luke Evers on 2013-08-15 at 15:46</time>
+</article>
+
+    </div>
+    <div class="foot">
+      <a href="mailto:luke@lukevers.com" class="icon-envelope"></a>
+      <a href="https://github.com/lukevers" class="icon-github"></a>
+      <a href="http://stackoverflow.com/users/2166043/luke-evers" class="icon-stackoverflow"></a>
+      <a href="https://twitter.com/lukevers_" class="icon-twitter"></a>
+      <a href="http://lukeevers.tumblr.com/" class="icon-tumblr"></a>
+      <a href="https://www.facebook.com/lukeevers" class="icon-facebook"></a>
+      <a href="http://www.reddit.com/user/lukevers/" class="icon-reddit"></a>
+    </div>
+  </body>
+</html>

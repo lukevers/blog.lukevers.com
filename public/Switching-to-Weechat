@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Switching to Weechat</title>
+    <link rel="alternate" href="/rss" type="application/rss+xml" title="RSS"/>
+    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png"/>
+    <meta charset="utf-8">
+    
+<link rel="stylesheet" href="/assets/css/rainbow.css">
+<link rel="stylesheet" href="/assets/css/nprogress.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+    
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/nprogress.js"></script>
+<script type="text/javascript" src="/assets/js/rainbow.js"></script>
+<script type="text/javascript" src="/assets/js/color.js"></script>
+<script type="text/javascript" src="/assets/js/language/css.js"></script>
+<script type="text/javascript" src="/assets/js/language/generic.js"></script>
+<script type="text/javascript" src="/assets/js/language/go.js"></script>
+<script type="text/javascript" src="/assets/js/language/html.js"></script>
+<script type="text/javascript" src="/assets/js/language/javascript.js"></script>
+<script type="text/javascript" src="/assets/js/language/shell.js"></script>
+
+    
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://analytics.lukevers.com/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "6"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="head">
+	<a href="/">home</a> / 
+	<a href="https://lukevers.com">website</a> /
+	<a href="/rss">rss</a> /
+	
+	<a href="Switching-to-Nginx">&#8592; Switching to Nginx</a> /
+	
+	Switching to Weechat
+	
+	/ <a href="Keyboard-Backlight-on-Debian-Wheezy-on-Macbook-Pro-9-2">Keyboard Backlight on Debian Wheezy with Macbook Pro 9,2 &#8594;</a>
+	
+      </div>
+      
+<article>
+  <h1>Switching to Weechat</h1>
+  <div class="content"><p>I&rsquo;ve been wanting to switch from <a href="http://xchat.org/">xchat</a> to <a href="http://www.weechat.org/">weechat</a> for awhile now, but for some reason I always put it off. I&rsquo;m not really sure why becuase it is wonderful!</p>
+
+<p>The only problem so far is that I&rsquo;ve had to change some of the keybindings, which is farily easy. I don&rsquo;t have a page up key or a page down key, so I had to set new bindings for them. I&rsquo;m on a <code>macbookpro9,2</code> dual booting Debian Wheezy and OS X (which I&rsquo;ll save for another blog post), so I decided to use my Apple (or command) button.</p>
+
+<h4>My Dilemma</h4>
+
+<p>So what&rsquo;s the name of the Apple key? If you&rsquo;re in weechat, it&rsquo;s extremely easy to find out because they get it for you when you add a new keybinding. For my keybindings I used <code>Command+Up</code> (page up) and <code>Command+Down</code> (page down).</p>
+
+<pre><code class="generic">/key bind (alt + k) (keybinding)
+</code></pre>
+
+<p>It ended up spitting out <code>meta-0A</code> for page up and <code>meta-0B</code> for page down! I believe that the Command key has a different keybinding on Debian than <code>meta</code> (or at least it should), but I forgot that I set the Control key and the Command key to the same thing so I can use either for it.</p>
+
+<p>So in the end, I ended up using these two commands:</p>
+
+<pre><code class="generic">/key bind meta-0A /window page_up
+/key bind meta-0B /window page_down
+</code></pre>
+
+<h4>Conclusions</h4>
+
+<p>I haven&rsquo;t used weechat more than an hour now, but it looks like weechat is here to stay! Besides, it&rsquo;s so fun to just say weeeeeeeeeeechat!</p>
+</div>
+  <time>This post was published by Luke Evers on 2013-08-15 at 09:48</time>
+</article>
+
+    </div>
+    <div class="foot">
+      <a href="mailto:luke@lukevers.com" class="icon-envelope"></a>
+      <a href="https://github.com/lukevers" class="icon-github"></a>
+      <a href="http://stackoverflow.com/users/2166043/luke-evers" class="icon-stackoverflow"></a>
+      <a href="https://twitter.com/lukevers_" class="icon-twitter"></a>
+      <a href="http://lukeevers.tumblr.com/" class="icon-tumblr"></a>
+      <a href="https://www.facebook.com/lukeevers" class="icon-facebook"></a>
+      <a href="http://www.reddit.com/user/lukevers/" class="icon-reddit"></a>
+    </div>
+  </body>
+</html>

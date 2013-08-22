@@ -1,0 +1,40 @@
+{{ define "post" }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ .Post.ShortPost.Title }}</title>
+    <link rel="alternate" href="/rss" type="application/rss+xml" title="RSS"/>
+    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png"/>
+    <meta charset="utf-8">
+    {{ template "styles" . }}
+    {{ template "scripts" . }}
+    {{ template "analytics" . }}
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="head">
+	<a href="/">home</a> / 
+	<a href="https://lukevers.com">website</a> /
+	<a href="/rss">rss</a> /
+	{{with .Next}}
+	<a href="{{.Slug}}">&#8592; {{.Title}}</a> /
+	{{end}}
+	{{.Post.Title}}
+	{{with .Prev}}
+	/ <a href="{{.Slug}}">{{.Title}} &#8594;</a>
+	{{end}}
+      </div>
+      {{ template "content" . }}
+    </div>
+    <div class="foot">
+      <a href="mailto:luke@lukevers.com" class="icon-envelope"></a>
+      <a href="https://github.com/lukevers" class="icon-github"></a>
+      <a href="http://stackoverflow.com/users/2166043/luke-evers" class="icon-stackoverflow"></a>
+      <a href="https://twitter.com/lukevers_" class="icon-twitter"></a>
+      <a href="http://lukeevers.tumblr.com/" class="icon-tumblr"></a>
+      <a href="https://www.facebook.com/lukeevers" class="icon-facebook"></a>
+      <a href="http://www.reddit.com/user/lukevers/" class="icon-reddit"></a>
+    </div>
+  </body>
+</html>
+{{ end }}

@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mimetypes in Lighttpd</title>
+    <link rel="alternate" href="/rss" type="application/rss+xml" title="RSS"/>
+    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png"/>
+    <meta charset="utf-8">
+    
+<link rel="stylesheet" href="/assets/css/rainbow.css">
+<link rel="stylesheet" href="/assets/css/nprogress.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/fonts.css">
+
+    
+<script type="text/javascript" src="/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/assets/js/nprogress.js"></script>
+<script type="text/javascript" src="/assets/js/rainbow.js"></script>
+<script type="text/javascript" src="/assets/js/color.js"></script>
+<script type="text/javascript" src="/assets/js/language/css.js"></script>
+<script type="text/javascript" src="/assets/js/language/generic.js"></script>
+<script type="text/javascript" src="/assets/js/language/go.js"></script>
+<script type="text/javascript" src="/assets/js/language/html.js"></script>
+<script type="text/javascript" src="/assets/js/language/javascript.js"></script>
+<script type="text/javascript" src="/assets/js/language/shell.js"></script>
+
+    
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://analytics.lukevers.com/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "6"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="head">
+	<a href="/">home</a> / 
+	<a href="https://lukevers.com">website</a> /
+	<a href="/rss">rss</a> /
+	
+	<a href="Initial-Commit">&#8592; Initial Commit</a> /
+	
+	Mimetypes in Lighttpd
+	
+	/ <a href="Double-Bitwise-Not">Double Bitwise Not &#8594;</a>
+	
+      </div>
+      
+<article>
+  <h1>Mimetypes in Lighttpd</h1>
+  <div class="content"><p>So at first when I set up this blog, I was having problems with my RSS feed. I noticed that when I clicked any link on my RSS feed, instead of loading the page that it links to, it asked you where to save your downloaded file! I was confused at first, but then I realized that it wasn&rsquo;t a problem with <a href="https://github.com/PuerkitoBio/trofaf">Trofaf</a>, but that it was an issue with mimetypes and Lighttpd. The default mimetype for Lighttpd is <code>application/octet-stream</code> when I want it to be <code>text/html</code>.</p>
+
+<p>So what&rsquo;s the best way to fix this? Change the default mimetype! So at first, I added this:</p>
+
+<pre><code class="shell">mimetype.assign = ( &quot;&quot; =&gt; &quot;text/html&quot; )
+</code></pre>
+
+<p>And then I got an error saying that a reference to mimetype has already been made, so I searched my config file and then I realized that it was coming from here:</p>
+
+<pre><code class="shell">/usr/share/lighttpd/create-mime.assign.pl
+</code></pre>
+
+<p>A simple perl script that generated all of the mimetypes. After thinking for a second, I figured out what I could do!</p>
+
+<pre><code class="shell">mimetype.assign += ( &quot;&quot; =&gt; &quot;text/html&quot; )
+</code></pre>
+
+<p>Voilá! The default mimetype is now set to <code>text/html</code>.</p>
+</div>
+  <time>This post was published by Luke Evers on 2013-08-06 at 10:39</time>
+</article>
+
+    </div>
+    <div class="foot">
+      <a href="mailto:luke@lukevers.com" class="icon-envelope"></a>
+      <a href="https://github.com/lukevers" class="icon-github"></a>
+      <a href="http://stackoverflow.com/users/2166043/luke-evers" class="icon-stackoverflow"></a>
+      <a href="https://twitter.com/lukevers_" class="icon-twitter"></a>
+      <a href="http://lukeevers.tumblr.com/" class="icon-tumblr"></a>
+      <a href="https://www.facebook.com/lukeevers" class="icon-facebook"></a>
+      <a href="http://www.reddit.com/user/lukevers/" class="icon-reddit"></a>
+    </div>
+  </body>
+</html>
