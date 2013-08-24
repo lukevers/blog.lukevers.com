@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    NProgress.set(0, 5);
     var code = $('code');
     
     for (var i = 0; i < code.length; i++) {
@@ -10,5 +9,4 @@ $(document).ready(function() {
     }
     
     Rainbow.color();
-    NProgress.done();
 });
