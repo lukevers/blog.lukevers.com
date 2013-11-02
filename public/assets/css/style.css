@@ -14,6 +14,10 @@ hr {
     background-color: #EEE;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* ========== Links ========== */
 
 a {
