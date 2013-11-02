@@ -45,8 +45,8 @@ Usage: terminal-notifier -[message|list|remove] [VALUE|ID|ID] [options]
    Either of these is required:
 
        -message VALUE     The notification message.
-       -remove ID         Removes a notification with the specified `upâup` ID.
-       -list ID           If the specified `upâup`ists show when it was delivered,
+       -remove ID         Removes a notification with the specified `group` ID.
+       -list ID           If the specified `group` ID exists show when it was delivered,
                           or use `ALL` to see all notifications.
                           The output is a tab-separated list.
 
